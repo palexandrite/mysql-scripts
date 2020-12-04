@@ -1,3 +1,40 @@
+/*
+Striking method of inserting great plenty of records
+*/
+-- The start of fast method
+
+CREATE TABLE samples ( -- just for example
+  title varchar(256) NOT NULL
+);
+
+INSERT INTO
+  samples (title)
+VALUES
+  ('8iRDgsEIq4GmOs32FnHM3b3cH60n3mm8070'), 
+  ('UAmsXyrKgApfHMyV2kUrYqLphN99Q7TJSoe'), 
+  ('OX1qiFeTigcOTO5JVvgFk7MRDgjgatkTqwL'), 
+  ('CT9Kfbplp4QC87G32UIKlkGd31jdjt4qH4f'), 
+  ('WsAhjBL5tAgihYZBtX97FNUmEpXavhb4CRw'), 
+  ('LwaitJ5dieXyixEmjJXhhqDY8Zg9Tu5ecoV'), 
+  ('KpHsnqrcMCpkRxkGNMjEJV0jFaeucPtbLWe'), 
+  ('t2GSIDOvW14eMlroAWrRR6xU5DoeNUXY0lD'), 
+  ('rSvrEPxR8rcw7QYjXfeNdyf3LpqYNHu3W7a'), 
+  ('6liUHPkjnygSatoUB4juZ5TaJZjaxHpR4BL');
+  
+INSERT INTO
+  tests
+SELECT
+  fst.title
+FROM
+  samples AS fst,
+  samples AS snd,
+  samples AS thd,
+  samples AS fth,
+  samples AS fif,
+  samples AS sth;
+
+-- The fast method's end
+
 DROP PROCEDURE IF EXISTS dowhile;
 
 DELIMITER ;;
